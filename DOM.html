@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>интукод</title>
+</head>
+
+<body>
+    <div id="main">
+        <ul id="list">
+            <li>html</li>
+            <li>css</li>
+        </ul>
+    </div>
+    <div id="copyright">(c) INTOCODE</div>
+    <script>
+
+        h = () => {
+            let h1 = document.createElement("h1")
+            h1.textContent = "Работа с DOM"
+            document.body.prepend(h1)
+        }
+        h();
+
+        article = () => {
+            let main = document.getElementById("main")
+            let a = document.createElement("a")
+            a.href = "https://ru.wikipedia.org/wiki/Document_Object_Model"
+            a.textContent = "Ссылка на DOM"
+            main.append(a)
+        }
+        article()
+
+        bg = (color) => {
+            document.body.style.background = color
+        }
+        bg('grey')
+
+        txt = (text) => {
+            let list = document.getElementById("list")
+
+            for (i = 0; i < 1; i++) {
+                let li = document.createElement('li')
+                li.append(text)
+                list.append(li)
+            }
+        }
+        txt('runaway')
+
+        remove = () => {
+            let copyright = document.getElementById("copyright")
+            copyright.remove()
+        }
+        remove()
+
+    </script>
+</body>
+
+</html>
